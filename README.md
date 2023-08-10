@@ -1,5 +1,7 @@
 # bpmn-js-headless
 
+[![CI](https://github.com/bpmn-io/bpmn-js-headless/actions/workflows/CI.yml/badge.svg)](https://github.com/bpmn-io/bpmn-js-headless/actions/workflows/CI.yml)
+
 Run [bpmn-js](https://github.com/bpmn-io/bpmn-js) in headless environments.
 
 
