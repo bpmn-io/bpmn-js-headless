@@ -10,6 +10,7 @@ import ConditionElementTemplate from './condition-template.json';
 
 
 import CloudElementTemplatesModule from 'bpmn-js-element-templates/cloud-core';
+import CloudBehaviorsModule from 'camunda-bpmn-js-behaviors/lib/camunda-cloud';
 
 async function run() {
 
@@ -17,6 +18,7 @@ async function run() {
 
   const modeler = new BpmnModeler({
     additionalModules: [
+      CloudBehaviorsModule,
       CloudElementTemplatesModule
     ],
     moddleExtensions: {
