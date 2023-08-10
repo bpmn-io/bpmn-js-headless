@@ -18,6 +18,8 @@ jobs:
         node-version: 16
         cache: 'npm'
     - name: Install dependencies
+      env:
+        PUPPETEER_SKIP_DOWNLOAD: 1
       run: npm ci
     - name: Build
       run: npm run all
