@@ -1,0 +1,31 @@
+{
+  "name": "bpmn-js-headless",
+  "description": "A headless version of bpmn-js",
+  "scripts": {
+    "all": "run-s bundle test",
+    "bundle": "rollup -c rollup.config.js --bundleConfigAsCjs",
+    "test": "node test/dist/test.js",
+    "prepare": "run-s bundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpmn-io/bpmn-js-headless"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.3",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-replace": "^5.0.2",
+    "bpmn-js-element-templates": "github:bpmn-io/bpmn-js-element-templates#headless",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^3.28.0",
+    "zeebe-bpmn-moddle": "^0.19.0"
+  },
+  "dependencies": {
+    "bpmn-js": "github:bpmn-io/bpmn-js#headless",
+    "diagram-js": "github:bpmn-io/diagram-js#headless"
+  },
+  "files": [
+    "lib"
+  ]
+}
