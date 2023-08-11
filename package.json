@@ -8,6 +8,13 @@
     "test": "node test/dist/test.js",
     "prepare": "run-s bundle"
   },
+  "exports": {
+    "./lib/Modeler": {
+      "import": "./lib/Modeler.mjs",
+      "require": "./lib/Modeler.js"
+    },
+    "./package.json": "./package.json"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bpmn-io/bpmn-js-headless"
