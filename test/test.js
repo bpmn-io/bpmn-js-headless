@@ -3,7 +3,7 @@
 import fs from 'fs/promises';
 import assert from 'assert';
 
-import BpmnModeler from '../lib/Modeler';
+import BpmnModeler from 'bpmn-js-headless/lib/Modeler';
 
 import ZeebeModdle from 'zeebe-bpmn-moddle/resources/zeebe.json';
 import ConditionElementTemplate from './condition-template.json';
