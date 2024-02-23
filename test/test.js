@@ -35,7 +35,8 @@ async function run() {
 
   assert.strictEqual(warnings.length, 0, 'no import warnings');
 
-  modeler.invoke((elementRegistry, elementTemplates) => {
+  // test 1: apply element template
+  const task = modeler.invoke((elementRegistry, elementTemplates) => {
 
     const task = elementRegistry.get('Task_1');
 
@@ -44,6 +45,41 @@ async function run() {
     return elementTemplates.applyTemplate(task, conditionTemplate);
   });
 
+  // then
+  assert.ok(task);
+
+  // test 2: model something
+  const connection = modeler.invoke((canvas, elementFactory, modeling) => {
+
+    const parent = canvas.getRootElement();
+
+    const shape1 = modeling.createShape(
+      elementFactory.createShape({ type: 'bpmn:UserTask' }),
+      {
+        x: 300,
+        y: 300
+      },
+      parent
+    );
+
+    const shape2 = modeling.createShape(
+      elementFactory.createShape({ type: 'bpmn:UserTask' }),
+      {
+        x: 500,
+        y: 300
+      },
+      parent
+    );
+
+    return modeling.connect(shape1, shape2);
+  });
+
+  // then
+  assert.ok(connection);
+
+  console.log(connection);
+
+  // test 3: serialize with template
   const {
     xml
   } = await modeler.saveXML({ format: true });
