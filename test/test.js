@@ -12,7 +12,7 @@ import {
   CloudElementTemplatesCoreModule
 } from 'bpmn-js-element-templates/core';
 
-import CloudBehaviorsModule from 'camunda-bpmn-js-behaviors/lib/camunda-cloud';
+import CloudBehaviorsModule from 'camunda-bpmn-js-behaviors/lib/camunda-cloud/index.js';
 
 async function run() {
 

@@ -1,8 +1,8 @@
-import BaseCoreModule from 'diagram-js/lib/core';
+import BaseCoreModule from 'diagram-js/lib/core/index.js';
 
-import GraphicsFactory from './GraphicsFactory';
-import Canvas from './Canvas';
-import ElementRegistry from './ElementRegistry';
+import GraphicsFactory from './GraphicsFactory.js';
+import Canvas from './Canvas.js';
+import ElementRegistry from './ElementRegistry.js';
 
 /**
  * @type { import('didi').ModuleDeclaration }

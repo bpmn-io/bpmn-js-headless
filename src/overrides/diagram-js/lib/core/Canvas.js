@@ -8,18 +8,23 @@ import {
 import {
   add as collectionAdd,
   remove as collectionRemove
-} from 'diagram-js/lib/util/Collections';
+} from 'diagram-js/lib/util/Collections.js';
 
 import {
   getType
-} from 'diagram-js/lib/util/Elements';
+} from 'diagram-js/lib/util/Elements.js';
 
 
 /**
- * @typedef {import('./Types').ConnectionLike} ConnectionLike
- * @typedef {import('./Types').RootLike} RootLike
- * @typedef {import('./Types').ParentLike } ParentLike
- * @typedef {import('./Types').ShapeLike} ShapeLike
+ * @typedef {import('diagram-js/lib/core/Types.js').ConnectionLike} ConnectionLike
+ * @typedef {import('diagram-js/lib/core/Types.js').RootLike} RootLike
+ * @typedef {import('diagram-js/lib/core/Types.js').ParentLike } ParentLike
+ * @typedef {import('diagram-js/lib/core/Types.js').ShapeLike} ShapeLike
+ *
+ * @typedef {import('diagram-js/lib/util/Types.js').Dimensions} Dimensions
+ * @typedef {import('diagram-js/lib/util/Types.js').Point} Point
+ * @typedef {import('diagram-js/lib/util/Types.js').Rect} Rect
+ * @typedef {import('diagram-js/lib/util/Types.js').RectTRBL} RectTRBL
  *
  * @typedef { {
  *   container?: HTMLElement;
@@ -45,14 +50,9 @@ import {
  *   outer: Dimensions;
  * } & Rect } CanvasViewbox
  *
- * @typedef {import('./ElementRegistry').default} ElementRegistry
- * @typedef {import('./EventBus').default} EventBus
- * @typedef {import('./GraphicsFactory').default} GraphicsFactory
- *
- * @typedef {import('../util/Types').Dimensions} Dimensions
- * @typedef {import('../util/Types').Point} Point
- * @typedef {import('../util/Types').Rect} Rect
- * @typedef {import('../util/Types').RectTRBL} RectTRBL
+ * @typedef {import('./ElementRegistry.js').default} ElementRegistry
+ * @typedef {import('diagram-js/lib/core/EventBus.js').default} EventBus
+ * @typedef {import('./GraphicsFactory.js').default} GraphicsFactory
  */
 
 function findRoot(element) {

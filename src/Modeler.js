@@ -1,16 +1,16 @@
-import BaseModeler from 'bpmn-js/lib/BaseModeler';
+import BaseModeler from 'bpmn-js/lib/BaseModeler.js';
 
-import CoreModule from 'bpmn-js/lib/core';
-import TranslateModule from 'diagram-js/lib/i18n/translate';
-import SelectionModule from 'diagram-js/lib/features/selection';
+import CoreModule from 'bpmn-js/lib/core/index.js';
+import TranslateModule from 'diagram-js/lib/i18n/translate/index.js';
+import SelectionModule from 'diagram-js/lib/features/selection/index.js';
 
-import AutoPlaceModule from 'bpmn-js/lib/features/auto-place';
-import AutoResizeModule from 'bpmn-js/lib/features/auto-resize';
-import CopyPasteModule from 'bpmn-js/lib/features/copy-paste';
-import EditorActionsModule from 'bpmn-js/lib/features/editor-actions';
-import ModelingModule from 'bpmn-js/lib/features/modeling';
+import AutoPlaceModule from 'bpmn-js/lib/features/auto-place/index.js';
+import AutoResizeModule from 'bpmn-js/lib/features/auto-resize/index.js';
+import CopyPasteModule from 'bpmn-js/lib/features/copy-paste/index.js';
+import EditorActionsModule from 'bpmn-js/lib/features/editor-actions/index.js';
+import ModelingModule from 'bpmn-js/lib/features/modeling/index.js';
 
-import CoreOverrideModule from './overrides/diagram-js/lib/core';
+import CoreOverrideModule from './overrides/diagram-js/lib/core/index.js';
 
 
 /**

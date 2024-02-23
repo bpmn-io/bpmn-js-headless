@@ -8,7 +8,7 @@ export default [
   {
     input: './src/Modeler.js',
     output: {
-      file: './lib/Modeler.js',
+      file: './lib/Modeler.cjs',
       format: 'commonjs'
     },
     plugins: pgl()
@@ -16,7 +16,7 @@ export default [
   {
     input: './src/Modeler.js',
     output: {
-      file: './lib/Modeler.mjs',
+      file: './lib/Modeler.js',
       format: 'esm'
     },
     plugins: pgl()
@@ -25,7 +25,7 @@ export default [
     input: './test/test.js',
     output: {
       file: './test/dist/test.js',
-      format: 'commonjs'
+      format: 'esm'
     },
     plugins: pgl()
   }

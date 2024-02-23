@@ -1,7 +1,7 @@
 /**
- * @typedef {import('./Types').ElementLike} ElementLike
+ * @typedef {import('diagram-js/lib/core/Types.js').ElementLike} ElementLike
  *
- * @typedef {import('./EventBus').default} EventBus
+ * @typedef {import('diagram-js/lib/core/EventBus.js').default} EventBus
  *
  * @typedef { (element: ElementLike, gfx: SVGElement) => boolean|any } ElementRegistryFilterCallback
  * @typedef { (element: ElementLike, gfx: SVGElement) => any } ElementRegistryForEachCallback

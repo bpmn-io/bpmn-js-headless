@@ -1,10 +1,10 @@
 /**
- * @typedef {import('./Types').ConnectionLike} ConnectionLike
- * @typedef {import('./Types').ElementLike} ElementLike
- * @typedef {import('./Types').ShapeLike} ShapeLike
+ * @typedef {import('diagram-js/lib/core/Types.js').ConnectionLike} ConnectionLike
+ * @typedef {import('diagram-js/lib/core/Types.js').ElementLike} ElementLike
+ * @typedef {import('diagram-js/lib/core/Types.js').ShapeLike} ShapeLike
  *
- * @typedef {import('./ElementRegistry').default} ElementRegistry
- * @typedef {import('./EventBus').default} EventBus
+ * @typedef {import('./ElementRegistry.js').default} ElementRegistry
+ * @typedef {import('diagram-js/lib/core/EventBus.js').default} EventBus
  */
 
 /**
