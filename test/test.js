@@ -47,6 +47,10 @@ async function run() {
 
   // then
   assert.ok(task);
+  assert.equal(
+    task.businessObject.get('zeebe:modelerTemplate'),
+    'example.com.condition'
+  );
 
   // test 2: model something
   const connection = modeler.invoke((canvas, elementFactory, modeling) => {
@@ -76,8 +80,7 @@ async function run() {
 
   // then
   assert.ok(connection);
-
-  console.log(connection);
+  assert.equal(connection.type, 'bpmn:SequenceFlow');
 
   // test 3: serialize with template
   const {
