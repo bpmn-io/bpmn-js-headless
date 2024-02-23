@@ -1,7 +1,7 @@
 {
   "name": "bpmn-js-headless",
   "description": "A headless version of bpmn-js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "all": "run-s bundle test",
     "bundle": "rollup -c rollup.config.js --bundleConfigAsCjs",
