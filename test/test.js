@@ -1,15 +1,17 @@
 /* eslint-env node */
 
-import fs from 'fs/promises';
-import assert from 'assert';
+import fs from 'node:fs/promises';
+import assert from 'node:assert';
 
 import BpmnModeler from 'bpmn-js-headless/lib/Modeler';
 
 import ZeebeModdle from 'zeebe-bpmn-moddle/resources/zeebe.json';
 import ConditionElementTemplate from './condition-template.json';
 
+import {
+  CloudElementTemplatesCoreModule
+} from 'bpmn-js-element-templates/core';
 
-import CloudElementTemplatesModule from 'bpmn-js-element-templates/cloud-core';
 import CloudBehaviorsModule from 'camunda-bpmn-js-behaviors/lib/camunda-cloud';
 
 async function run() {
@@ -19,7 +21,7 @@ async function run() {
   const modeler = new BpmnModeler({
     additionalModules: [
       CloudBehaviorsModule,
-      CloudElementTemplatesModule
+      CloudElementTemplatesCoreModule
     ],
     moddleExtensions: {
       zeebe: ZeebeModdle
