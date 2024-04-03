@@ -83,7 +83,7 @@ async function run() {
   assert.equal(connection.type, 'bpmn:SequenceFlow');
 
   // test 3: serialize with template
-  const {
+  let {
     xml
   } = await modeler.saveXML({ format: true });
 
@@ -92,6 +92,15 @@ async function run() {
     /<bpmn:task id="Task_1" name="foo" zeebe:modelerTemplate="example.com.condition" customProperty="nameProp=foo">/
   );
 
+  // test 4: update external label
+  assert.doesNotThrow(() => {
+    modeler.invoke((elementRegistry, modeling) => {
+
+      const event = elementRegistry.get('StartEvent_1');
+
+      modeling.updateProperties(event, { name: 'newName' });
+    });
+  });
 }
 
 run().catch(err => {
