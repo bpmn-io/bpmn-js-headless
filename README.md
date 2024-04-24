@@ -1,3 +1,6 @@
+> [!WARNING]
+> This is an experimental library and not officially supported / endorsed by [bpmn.io](https://bpmn.io/). See also [caveats](#caveats).
+
 # bpmn-js-headless
 
 [![CI](https://github.com/bpmn-io/bpmn-js-headless/actions/workflows/CI.yml/badge.svg)](https://github.com/bpmn-io/bpmn-js-headless/actions/workflows/CI.yml)
