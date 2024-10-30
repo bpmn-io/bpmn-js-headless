@@ -35,6 +35,7 @@ async function run() {
 
   assert.strictEqual(warnings.length, 0, 'no import warnings');
 
+
   // test 1: apply element template
   const task = modeler.invoke((elementRegistry, elementTemplates) => {
 
@@ -51,6 +52,7 @@ async function run() {
     task.businessObject.get('zeebe:modelerTemplate'),
     'example.com.condition'
   );
+
 
   // test 2: model something
   const connection = modeler.invoke((canvas, elementFactory, modeling) => {
@@ -82,6 +84,7 @@ async function run() {
   assert.ok(connection);
   assert.equal(connection.type, 'bpmn:SequenceFlow');
 
+
   // test 3: serialize with template
   const {
     xml
@@ -92,6 +95,29 @@ async function run() {
     /<bpmn:task id="Task_1" name="foo" zeebe:modelerTemplate="example.com.condition" customProperty="nameProp=foo">/
   );
 
+
+  // test 4: use selection, and trigger editor action
+  modeler.invoke((selection, elementRegistry, editorActions) => {
+
+    // given
+    const taskElement = elementRegistry.get('Task_1');
+
+    // assume
+    assert.deepEqual(selection.get(), []);
+
+    // when
+    selection.select(taskElement);
+
+    // then
+    assert.deepEqual(selection.get(), [ taskElement ]);
+
+    // when
+    editorActions.trigger('removeSelection');
+
+    // then
+    assert.deepEqual(selection.get(), []);
+    assert.deepEqual(elementRegistry.get('Task_1'), null);
+  });
 }
 
 run().catch(err => {
