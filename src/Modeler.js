@@ -11,6 +11,7 @@ import EditorActionsModule from 'bpmn-js/lib/features/editor-actions/index.js';
 import ModelingModule from 'bpmn-js/lib/features/modeling/index.js';
 
 import CoreOverrideModule from './overrides/diagram-js/lib/core/index.js';
+import DrawOverrideModule from './overrides/bpmn-js/lib/draw/index.js';
 
 
 /**
@@ -89,7 +90,8 @@ Modeler.prototype._baseModules = [
 ];
 
 Modeler.prototype._overrideModules = [
-  CoreOverrideModule
+  CoreOverrideModule,
+  DrawOverrideModule
 ];
 
 Modeler.prototype._modules = [].concat(
