@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 import fs from 'node:fs/promises';
 import assert from 'node:assert';
 
