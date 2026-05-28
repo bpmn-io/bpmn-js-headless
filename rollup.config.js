@@ -6,14 +6,6 @@ export default [
   {
     input: './src/Modeler.js',
     output: {
-      file: './lib/Modeler.cjs',
-      format: 'commonjs'
-    },
-    plugins: pgl()
-  },
-  {
-    input: './src/Modeler.js',
-    output: {
       file: './lib/Modeler.js',
       format: 'esm'
     },

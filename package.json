@@ -3,17 +3,15 @@
   "description": "A headless version of bpmn-js",
   "version": "0.1.0",
   "scripts": {
-    "all": "run-s bundle test",
+    "all": "run-s lint bundle test",
+    "lint": "eslint .",
     "bundle": "rollup -c rollup.config.js --bundleConfigAsCjs",
     "test": "node test/dist/test.js",
     "prepare": "run-s bundle"
   },
   "type": "module",
   "exports": {
-    "./lib/Modeler": {
-      "import": "./lib/Modeler.js",
-      "require": "./lib/Modeler.cjs"
-    },
+    "./lib/Modeler": "./lib/Modeler.js",
     "./package.json": "./package.json"
   },
   "repository": {
