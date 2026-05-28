@@ -29,6 +29,8 @@
     "bpmn-js-element-templates": "^2.24.0",
     "camunda-bpmn-js-behaviors": "^1.16.1",
     "diagram-js": "github:bpmn-io/diagram-js#headless",
+    "eslint": "^9.39.4",
+    "eslint-plugin-bpmn-io": "^2.2.0",
     "npm-run-all": "^4.1.5",
     "rollup": "^3.28.0",
     "zeebe-bpmn-moddle": "^1.14.0"
