@@ -1,7 +1,7 @@
 {
   "name": "bpmn-js-headless",
   "description": "A headless version of bpmn-js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "all": "run-s lint bundle test",
     "lint": "eslint .",
